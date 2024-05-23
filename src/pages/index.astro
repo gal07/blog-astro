@@ -1,5 +1,9 @@
 ---
 const pageTitle = "My Blog With Astro JS";
+import '../styles/global.scss';
+import Header from '../components/Header.astro';
+import Style from '../components/Style.astro';
+import Footer from '../components/Footer.astro';
 
 ---
 
@@ -10,13 +14,16 @@ const pageTitle = "My Blog With Astro JS";
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} >
     <title>{pageTitle}</title>
+    <Style />
   </head>
   <body>
-	<h1>{pageTitle}</h1>
+    <Header />
 
-  <a href="/">Home</a>
-  <a href="/about/">About</a>
-  <a href="/blog/">Blog</a>
+	  <h1>{pageTitle}</h1>
 
 </body>
+<Footer />
+<script>
+  import "../scripts/menu.js";
+</script>
 </html>
